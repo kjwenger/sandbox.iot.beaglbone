@@ -8,10 +8,11 @@ CURRENT_DIR="$(pwd)"
 SCRIPTS_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(dirname "${SCRIPTS_DIR}")"
 USR_DIR="${PROJECT_DIR}/usr"
+BUILD_DIR="${PROJECT_DIR}/build-arm-linux-gnueabihf"
 
 cd "${PROJECT_DIR}"
-mkdir -p build-arm-linux-gnueabihf
-pushd build-arm-linux-gnueabihf
+mkdir -p "${BUILD_DIR}"
+pushd "${BUILD_DIR}"
 cmake -DCMAKE_VERBOSE_MAKEFILE:BOOL=ON \
       -DCMAKE_TOOLCHAIN_FILE="${PROJECT_DIR}/toolchains/arm-linux-gnueabihf.cmake" \
       -DCMAKE_INSTALL_PREFIX="${USR_DIR}/arm-linux-gnueabihf" \

@@ -2,6 +2,7 @@
   <dictionary name="kw">
     <words>
       <w>beaglebone</w>
+      <w>debian</w>
       <w>gnueabihf</w>
       <w>modbus</w>
     </words>
