@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+
+# OSes
+.DS_Store
+
+# IDEs
+/.idea/workspace.xml
+/cmake-build-debug/
