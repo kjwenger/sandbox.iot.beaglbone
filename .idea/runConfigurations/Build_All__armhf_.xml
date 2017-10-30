@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Build All (armhf)" type="CMakeRunConfiguration" factoryName="Application" WORKING_DIR="file://$PROJECT_DIR$/cmake-build-debug-armhf" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="sandbox-iot-beaglebone" RUN_TARGET_NAME="modbus-master" EXPLICIT_BUILD_TARGET_NAME="all">
+    <envs>
+      <env name="CMAKE_BUILD_TYPE" value="Debug" />
+      <env name="CMAKE_TOOLCHAIN_FILE" value="toolchains/arm-linux-gnueabihf.cmake" />
+    </envs>
+    <method />
+  </configuration>
+</component>

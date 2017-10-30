@@ -37,3 +37,7 @@
 # IDEs
 /.idea/workspace.xml
 /cmake-build-debug/
+
+# Build
+/build/
+/build-arm-linux-gnueabihf/

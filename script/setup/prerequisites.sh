@@ -29,6 +29,8 @@ sudo apt install clang-format-3.9 -y
 sudo apt install clang-tidy-3.9 -y
 
 # Get prerequisites
+sudo apt install libmodbus -y
 sudo apt install libmodbus-dev -y
+sudo ln -s /usr/lib/x86_64-linux-gnu/libmodbus.so.5 /usr/lib/x86_64-linux-gnu/libmodbus.so
 
 # Get test prerequisites
