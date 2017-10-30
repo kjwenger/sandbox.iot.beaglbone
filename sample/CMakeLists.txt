@@ -8,6 +8,11 @@ if (NOT DEFINED CMAKE_PREFIX_PATH)
     set(CMAKE_PREFIX_PATH ${CMAKE_SOURCE_DIR}/usr)
 endif (NOT DEFINED CMAKE_PREFIX_PATH)
 
+if(CMAKE_COMPILER_IS_GNUCC)
+    message(STATUS "=== GCC C COMPILER DETECTED")
+    set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -ggdb -D_DEBUG -O0")
+endif(CMAKE_COMPILER_IS_GNUCC)
+
 #get_cmake_property(_variableNames VARIABLES)
 #foreach (_variableName ${_variableNames})
 #    message(STATUS "${_variableName}=${${_variableName}}")
@@ -48,4 +53,19 @@ target_include_directories(modbus-slave PUBLIC
 target_link_libraries(modbus-slave
 #        ${MODBUS_LIBRARY}
         modbus
+)
+
+find_package(Threads)
+add_executable(test_485
+        src/test_485.c
+)
+target_include_directories(test_485 PUBLIC
+        ${CMAKE_PREFIX_PATH}/local/include
+        ${CMAKE_PREFIX_PATH}/include
+        ${MODBUS_INCLUDE_DIRS}
+)
+target_link_libraries(test_485
+#        ${MODBUS_LIBRARY}
+        modbus
+        ${CMAKE_THREAD_LIBS_INIT}
 )

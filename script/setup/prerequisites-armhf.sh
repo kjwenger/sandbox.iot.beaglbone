@@ -9,6 +9,7 @@ sudo apt update
 
 # Get development tools
 sudo apt install crossbuild-essential-armhf -y
+sudo apt install gdb-arm-none-eabi -y
 
 # Get prerequisites
 sudo apt install libmodbus5:armhf -y

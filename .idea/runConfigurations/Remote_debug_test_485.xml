@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Remote debug test_485" type="CLion_Remote" factoryName="GDB Remote Debug" debugger="/usr/bin/arm-none-eabi-gdb" remoteCommand="tcp:beaglebone:12345" symbolFile="" sysroot="">
+    <method />
+  </configuration>
+</component>
