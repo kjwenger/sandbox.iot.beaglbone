@@ -9,3 +9,6 @@ sudo apt update
 
 # Get development tools
 sudo apt install crossbuild-essential-armhf -y
+
+# Get prerequisites
+sudo apt install libmodbus-dev:armhf -y

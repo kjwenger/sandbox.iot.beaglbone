@@ -22,13 +22,13 @@ sudo apt install autoconf -y
 sudo apt install libtool -y
 sudo apt install libpam0g-dev -y
 
-sudo apt install clang-3.9
-sudo apt install clang-3.9-doc
-sudo apt install clang-3.9-examples
-sudo apt install clang-format-3.9
-sudo apt install clang-tidy-3.9
+sudo apt install clang-3.9 -y
+sudo apt install clang-3.9-doc -y
+sudo apt install clang-3.9-examples -y
+sudo apt install clang-format-3.9 -y
+sudo apt install clang-tidy-3.9 -y
+
+# Get prerequisites
+sudo apt install libmodbus-dev -y
 
 # Get test prerequisites
-sudo apt install libcurl4-openssl-dev -y
-sudo apt install libjsoncpp-dev -y
-sudo apt install libjsoncpp1 -y
