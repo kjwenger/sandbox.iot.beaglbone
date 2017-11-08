@@ -1,0 +1,14 @@
+/dev/ttyO5
+57600
+lock
+crtscts
+noauth
+defaultroute
+user vodafone
+password vodafone
+connect '/usr/sbin/chat -V -e -t 90 -f /etc/ppp/gprs-connect-chat'
+noipdefault
+usepeerdns
+noccp
+debug
+logfile /var/log/ppp.log

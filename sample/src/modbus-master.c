@@ -8,7 +8,7 @@
 int main(int argc, char* argv[]) {
     //Create a new RTU context with proper serial parameters (in this example,
     //device name /dev/ttyS0, baud rate 9600, no parity bit, 8 data bits, 1 stop bit)
-    modbus_t *ctx = modbus_new_rtu("/dev/ttyS0", 9600, 'N', 8, 1);
+    modbus_t *ctx = modbus_new_rtu("/dev/ttyS4", 9600, 'N', 8, 1);
     if (!ctx) {
         fprintf(stderr, "Failed to create the context: %s\n", modbus_strerror(errno));
         exit(1);

@@ -1,0 +1,10 @@
+#!/bin/sh
+
+
+echo "...................................."
+echo "..............LCD7 TEST............."
+echo "...................................."
+
+cp /boot/am335x-boneblack-lcd7.dtb /boot/am335x-boneblack.dtb
+sync
+

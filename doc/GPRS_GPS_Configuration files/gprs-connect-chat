@@ -1,0 +1,22 @@
+TIMEOUT 60
+ABORT "BUSY"
+ABORT "NO CARRIER"
+ABORT "Username/Password Incorrect"
+SAY "Starting chat file \n"
+'' AT
+SAY "\n ATE0"
+OK ATE0
+SAY "\n AT#SELINT=2"
+OK AT#SELINT=2
+SAY "\n AT+IPR=57600"
+OK AT+IPR=57600
+SAY "\n AT&K0"
+OK AT&K0
+SAY "\n AT+CMEE=2"
+OK AT+CMEE=2
+SAY "\n AT#GAUTH=1"
+OK AT#GAUTH=1
+SAY "\n Logging in...."
+OK AT+CGDCONT=1,"IP","internet.zon.pt"
+SAY "\n ATD*99***1#"
+OK ATD*99***1#

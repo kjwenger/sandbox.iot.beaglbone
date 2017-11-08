@@ -20,7 +20,7 @@ int main(int argc, char* argv[]) {
     mapping->tab_registers[12] = 623;
 
 
-    modbus_t *ctx = modbus_new_rtu("/dev/ttyS0", 9600, 'N', 8, 1);
+    modbus_t *ctx = modbus_new_rtu("/dev/ttyS4", 9600, 'N', 8, 1);
     if (!ctx) {
         fprintf(stderr, "Failed to create the context: %s\n", modbus_strerror(errno));
         exit(1);

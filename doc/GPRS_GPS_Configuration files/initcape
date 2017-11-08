@@ -1,0 +1,41 @@
+#!/bin/sh
+#
+#   /etc/init.d/initcape: turns on GPS cape
+#
+
+
+case "$1" in
+  start)
+      	echo BB-BONE-GPS-GPRS >/sys/devices/bone_capemgr.8/slots
+		sleep 5
+		echo 60 > /sys/class/gpio/export
+		sleep 2
+		echo out > /sys/class/gpio/gpio60/direction
+		sleep 2
+		echo 0 > /sys/class/gpio/gpio60/value
+		sleep 1
+		echo 89 > /sys/class/gpio/export
+		sleep 0.3
+		echo out > /sys/class/gpio/gpio89/direction
+		sleep 0.3
+		echo 0 > /sys/class/gpio/gpio89/value
+		sleep 0.3
+		echo 1 > /sys/class/gpio/gpio89/value
+		sleep 5
+		echo 0 > /sys/class/gpio/gpio89/value
+		sleep 0.3
+    ;;
+  stop)
+     
+      echo "."
+    ;;
+  restart|force-reload)    
+    echo "."
+    ;;
+  *)
+      echo "Usage: /etc/init.d/ppp {start|stop|restart|force-reload}"
+      exit 1
+    ;;
+esac
+
+exit 0

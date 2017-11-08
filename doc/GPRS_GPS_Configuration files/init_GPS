@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo 89 > /sys/class/gpio/export
+sleep 0.3
+echo out > /sys/class/gpio/gpio89/direction
+sleep 0.3
+echo 0 > /sys/class/gpio/gpio89/value
+sleep 0.3
+echo 1 > /sys/class/gpio/gpio89/value
+sleep 5
+echo 0 > /sys/class/gpio/gpio89/value
+sleep 0.3
