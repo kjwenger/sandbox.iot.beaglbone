@@ -39,5 +39,7 @@
 /cmake-build-debug/
 
 # Build
-/build/
-/build-arm-linux-gnueabihf/
+/*build*/
+
+# Downloads
+/image/
